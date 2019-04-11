@@ -1,0 +1,26 @@
+﻿@model TSTSEF.Models.Agressor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Agressor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AgressorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgressorName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AgressorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

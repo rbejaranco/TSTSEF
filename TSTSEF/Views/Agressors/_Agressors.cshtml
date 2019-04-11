@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TSTSEF.Models.Agressor>
+
+<div id="AgressorsList">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AgressorName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AgressorName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AgressorId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.AgressorId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AgressorId })
+
+                    @Html.ActionLink(
+                                "Family",
+                                "Index",
+                                "Relatives",
+                                new { AgressorId = item.AgressorId },
+                                new { @class="btn btn-primary btn-sm active",
+                                    rol="button"
+                                } )
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
