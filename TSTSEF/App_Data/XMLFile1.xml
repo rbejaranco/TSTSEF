@@ -1,1 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> <cars>Ford</cars>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cars>
+  <car>Ford</car>
+</cars>
